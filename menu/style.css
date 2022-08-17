@@ -28,6 +28,8 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: auto;
+
 
   background: hsl(0 0% 0% / 0.75);
 }
@@ -55,7 +57,7 @@ li {
   margin-inline-end: 0.75em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .primary-navigation {
     --gap: 2em
 
@@ -93,7 +95,7 @@ li {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1007px) {
+@media (min-width: 701px) and (max-width: 1007px) {
   .primary-navigation a > span[arial-hidden='true'] {
     display: none;
   }
