@@ -17,9 +17,22 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-.main .main__paragraph {
+.main .main__paragraph1, .main .main__paragraph2 {
   font-weight: 400;
 }
-.main .main__paragraph:hover {
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
   color: #ff4081;
+}
+.main .main__paragraph2:hover {
+  color: #212121;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.light {
+  background: #d4faff;
+  color: black;
 }/*# sourceMappingURL=main.css.map */
