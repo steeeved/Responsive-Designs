@@ -14,8 +14,14 @@
 
 @mixin theme($light-theme: true) {
     @if $light-theme {
-        background: lighten($primary-color, 100%);
+        background: lighten($primary-color, 50%);
         color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
     }
 }
 
@@ -29,16 +35,27 @@ body {
   width: 80%;
   margin: 0 auto;
 
-  #{&}__paragraph {
+  #{&}__paragraph1 {
     font-weight: weight(regular);
 
     &:hover {
       color: $accent-color;
     }
   }
+
+  #{&}__paragraph2 {
+    @extend .main__paragraph1;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  @include mobile { 
+    flex-direction: column;
+  }
 }
 
-
 .light {
-  @include theme($light-theme: false)  
+  @include theme($light-theme: true)  
 }
