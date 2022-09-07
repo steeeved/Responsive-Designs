@@ -1,0 +1,31 @@
+$light: #f7f7f7;
+$dark: #333333;
+$lime: #00ff00;
+$orangeRed: #ff4500;
+$blue: #0000ff;
+
+$font-stack: 'Poppins', sans-serif;
+
+%align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin max {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mid {
+    @media screen and (max-width: 780px) {
+        @content;
+    }
+}
+
+@mixin min {
+    @media screen and (max-width: 280px) {
+        @content;
+    }
+}
