@@ -1,57 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import 'navbar';
+@import 'hero';
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.hero {
-  background-color: $light;
-
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    margin: 0 auto;
-    height: 90vh;
-    z-index: 1;
-    width: 100%;
-    max-width: 1200px;
-    padding-right: 24px;
-    padding-left: 24px;
-
-    @include mid {
-      grid-template-columns: 1fr;
-      height: 100%;
-      background-color: aqua;
-    }
-
-    &--left {
-      width: 100%;
-      line-height: 1.2;
-
-      @include tablet {
-        padding: 5rem 0;
-      }
-
-      @include mobile {
-        line-height: 1.5;
-      }
-    }
-
-    &--left h1 {
-      font-family: $font-stack;
-      font-size: 4rem;
-      font-weight: 800;
-      color: $lime;
-      margin-bottom: 1rem;
-
-      @include min {
-        font-size: 1.5rem;
-      }
-    }
-  }
 }
