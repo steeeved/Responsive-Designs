@@ -1,0 +1,74 @@
+body {
+	background-color: #f9f9f9;
+	margin-top: 25px;
+}
+
+.col-sm-2 {
+  padding: 10px;
+  border-radius: 4px;
+  height: 125px;
+  margin-bottom: 10px;
+}
+
+.sp {
+  width: 32px;
+  height: 32px;
+  clear: both;
+  margin: 20px auto;
+}
+
+/* Spinner Circle Rotation */
+@-webkit-keyframes spCircRot {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spCircRot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.sp-circle {
+ background-color: aqua;
+  border: 4px rgba(#000, 0.25) solid;
+  border-top: 4px solid rgba(#000, 1);
+  border-radius: 50%;
+  -webkit-animation: spCircRot 0.6s infinite linear;
+  animation: spCircRot 0.6s infinite linear;
+}
+
+
+/* Spinner VolumeButton */
+.sp-volume {
+	background-color: #000;
+	border-radius: 50%;
+	position: relative;
+	-webkit-animation: spVolRot .6s infinite linear;
+	animation: spVolRot .6s infinite linear;
+}
+.sp-volume:after {
+	content: '';
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	left: 5px;
+	top: 5px;
+	background-color: lighten(#000,100%);
+}
+@-webkit-keyframes spVolRot {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(359deg); }
+}
+@keyframes spVolRot {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(359deg); }
+}
