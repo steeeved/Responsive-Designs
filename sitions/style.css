@@ -1,0 +1,18 @@
+body {
+    margin: 100px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: #3DCCC7;
+    transition-duration: .5s;
+    transition-property: width, height, background;
+}
+
+.box:hover {
+    background: #278e8b;
+    width: 210px;
+    /* transform: rotate(45deg); */
+    height: 210px;
+}
