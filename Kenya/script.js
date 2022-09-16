@@ -19,10 +19,14 @@ const backgroundkenyanCoords = {
   left: backgroundCoords.left
 };
 
+
 function handleEnter(path) {
   background.classList.add('open');
+  // Change fill to white
+  path.style.fill = '#fff';
 
   const pathCoords = path.getBoundingClientRect();
+  console.log(pathCoords);
   const coords = {
     width: pathCoords.width,
     height: pathCoords.height,
@@ -40,7 +44,10 @@ function handleEnter(path) {
 function handleLeave(path) {
 //   path.classList.remove('trigger-enter');
 //   background.classList.remove('open');
+  path.style.fill = '#000';
 }
+
+
 
 //listen for a mouse enter in the svg
 svg.forEach((path) => {
@@ -52,6 +59,6 @@ svg.forEach((path) => {
   });
 });
 
-mapdiv.addEventListener('mouseleave', () => {
-    background.classList.remove('open');
-});
+// mapdiv.addEventListener('mouseleave', () => {
+//     background.classList.remove('open');
+// });
