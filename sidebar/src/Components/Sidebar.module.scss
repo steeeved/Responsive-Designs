@@ -1,5 +1,48 @@
-.Sidebar {
-    width: 250px;
-    height: 100%;
-    background-color: var(--backGround-color);
+.main {
+  width: 250px;
+  height: 100%;
+  background-color: var(--backGround-color);
+
+  .Sidebar {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+
+    #active {
+      background-color: var(--hoverColor);
+    }
+    
+    li {
+      width: 100%;
+      height: 60px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-family: fantasy;
+      color: antiquewhite;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--hoverColor);
+      }
+
+      #icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex: 30;
+        place-items: center;
+      }
+
+      #title {
+        flex: 70%;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
 }
+
