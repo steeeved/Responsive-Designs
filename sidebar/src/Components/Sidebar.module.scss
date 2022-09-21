@@ -22,8 +22,10 @@
       justify-content: center;
       font-family: fantasy;
       color: antiquewhite;
-
+      transition: all 0.5s ease;
+      
       &:hover {
+        transform: scale(1.1);
         cursor: pointer;
         background-color: var(--hoverColor);
       }
